@@ -159,7 +159,7 @@ Paso │ Agente A (Backend Core)      │ Agente B (Backend Aux)         │ Age
 > `C-03` es el change recomendado por la cátedra: ciclo OPSX único y chico, reglas RN1+RN2+RN3 verificables por test.
 
 ### [C-03] `crear-turno-anti-solapamiento`
-- **Estado**: `[ ]` pendiente
+- **Estado**: `[x]` completado — archivado `openspec/changes/archive/2026-10-08-c-03-crear-turno-anti-solapamiento/`
 - **Scope**: Crear un turno evitando solapamientos por profesional y por sillón/box (US-001; RN1+RN2+RN3+RN8)
   - Modelos: `Profesional` (matrícula única, horario_semanal JSON), `Sillon` (nombre único por sucursal), `Prestacion` (duracion_min > 0, precio_base, requiere_sillon, color_agenda), `Paciente` mínimo (nombre, dni único, teléfono obligatorio, os_id nullable), `Turno` (inicio/fin tz AR, origen mostrador/online, estado reservado/confirmado/atendido/cancelado/ausente/sobreturno, token_publico), `Auditoria` append-only (quién creó, RN6b)
   - `dominio_agenda.valida()`: `fin = inicio + prestacion.duracion_min` (RN3); intervalos semiabiertos `[inicio, fin)`; choque si `nuevo.inicio < existente.fin AND nuevo.fin > existente.inicio`; borde `fin == inicio` permitido; valida RN1 y RN2 en paralelo, ambas deben pasar
