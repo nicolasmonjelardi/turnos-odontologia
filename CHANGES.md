@@ -118,7 +118,7 @@ Paso │ Agente A (Backend Core)      │ Agente B (Backend Aux)         │ Age
 ## FASE 0 — Cimientos
 
 ### [C-01] `foundation-setup`
-- **Estado**: `[ ]` pendiente
+- **Estado**: `[~]` parcial — scaffolding mínimo dentro de C-03, ver `docs/fundacion-c01-c02-constancia.md`
 - **Scope**: Scaffolding completo + infraestructura base reproducible
   - Estructura de directorios según `08 §Estructura`: `backend/app/{domain,routers,repos,integrations,auth,worker}`, `backend/alembic`, `backend/tests/escenarios`, `frontend/src`
   - `backend/`: FastAPI app mínima con `GET /api/health`, settings por `.env`, logger, manejo de excepciones, `TZ=America/Argentina/Buenos_Aires` (RN10)
@@ -136,7 +136,7 @@ Paso │ Agente A (Backend Core)      │ Agente B (Backend Aux)         │ Age
 ---
 
 ### [C-02] `auth-usuarios-roles`
-- **Estado**: `[ ]` pendiente
+- **Estado**: `[~]` parcial — stub-auth dentro de C-03 (TODO C-02), ver `docs/fundacion-c01-c02-constancia.md`
 - **Scope**: Autenticación JWT + RBAC + base de identidad del canal público
   - Modelos: `Usuario` (email único, hash_password, rol admin/recepcionista/odontologo, activo), `Rol`; `sucursal_id` reservado default mono (DD-03)
   - `POST /api/auth/login` — JWT access corto + refresh; rate limiting 5/60s por IP+email; `POST /api/auth/refresh` con rotación y blacklist; `POST /api/auth/logout`; `GET /api/auth/me`

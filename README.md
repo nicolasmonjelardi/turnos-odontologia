@@ -43,6 +43,8 @@ Sin Docker en el entorno de cátedra: los tests de dominio/API siguen verdes sin
 
 ## Supuestos declarados (stub-auth + recorte)
 
+> C-01/C-02 parciales: ver `docs/fundacion-c01-c02-constancia.md`.
+
 - **Stub-auth**: `backend/src/auth_stub.py` (`get_current_user` fake + `require_role`
   no-op). TODO(C-02): reemplazar por JWT real. Ningún test depende de permisos reales.
 - **Recorte c-03** (contrato del spec aprobado): solo `POST /api/turnos` + `valida()`.
