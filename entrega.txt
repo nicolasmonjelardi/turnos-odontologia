@@ -1,0 +1,18 @@
+TRABAJO DE INTEGRACIÓN — METODOLOGÍA I
+Spec-Driven Development y Active Stack: del Discovery al primer Change
+Tecnicatura Universitaria en Programación
+
+============================================================
+DATOS DE LA ENTREGA
+============================================================
+
+• Integrante: Nicolás Monjelardi (Entrega individual)
+
+• Repositorio GitHub:
+  https://github.com/nicolasmonjelardi/turnos-odontologia
+
+• Video de Defensa (YouTube):
+  https://youtu.be/x7Mk0qXt5WY
+
+• Change implementado:
+  C-03: crear-turno-anti-solapamiento (RN1 + RN2 + RN3)
